@@ -1,0 +1,34 @@
+print 
+print "________________________________________Flashcards!________________________________________"
+print 
+print
+card_number= int(raw_input("How many notecards do you want? "))
+webstersdict={}
+for x in range(card_number):
+    front_of_card= raw_input("Please enter what you want on the front of the card: ")
+    back_of_card= raw_input("Please enter the corresponding answer for the back of the card: ")
+    webstersdict[front_of_card]=back_of_card
+print "___________________________________________________________________________________________"
+print webstersdict 
+print "The line above shows all of your flashcard data together. Comment that line out (by placing a '#' in front of the line) when you don't want to see the answers."
+print
+print
+ff = webstersdict.keys()
+print ff
+print "-- These are the fronts of your cards. You can test yourself by inputting which card you want to use, guessing its value, and then pressing enter to see the answer. Good luck!"
+print "___________________________________________________________________________________________"
+print
+checkyoself=''   
+while checkyoself!=0:
+	checkyoself = str(raw_input("""Input the card you want to use, by typing one of the fronts of cards above. Type 'quit' to exit: """))
+	if checkyoself=='quit':
+	    checkyoself=0
+	else:
+	    print "Answer: %s" %webstersdict[checkyoself]
+    print"___________________________________________________________________________________________"
+	print ff
+	print "These are the fronts of your cards."
+	print "___________________________________________________________________________________________"
+
+
+#This new code allows the user to input the front and back of each card at the same time, which is more similar to the process of making notecards in real life.  This code also is more friendly to those with less programming experience, by changing some of the print statements to include less of the python language.  Overall, these changes just make the notecards more user friendly.	
